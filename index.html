@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>My Portfolio</title>
+     <style>
+          /* Internal CSS */
+          body {
+               font-family: Arial, sans-serif;
+               margin: 0;
+               padding: 0;
+               background-color: #042331;
+          }
+
+          header {
+               background: #042337;
+               color: #fff;
+               padding: 10px 0;
+               text-align: center;
+          }
+
+          h1 {
+               text-align: center;
+          }
+
+          nav {
+               margin: 0;
+               padding: 10px;
+
+          }
+
+          nav a {
+               color: #fff;
+               text-decoration: none;
+               padding: 10px 15px;
+
+          }
+
+          nav a:hover {
+               background: #575757;
+          }
+
+          .container {
+               display: flex;
+               justify-content: space-around;
+               align-items: center;
+               padding: 20px;
+          }
+
+          .text {
+               max-width: 600px;
+               color: rgb(153, 153, 148);
+          }
+
+          img {
+               max-width: 280px;
+               border: 300px;
+               border-radius: 90px;
+               border-color: orange;
+          }
+
+          footer {
+               text-align: center;
+               padding: 20px;
+               background: #333;
+               color: #fff;
+               position: relative;
+               bottom: 0;
+               width: 100%;
+          }
+     </style>
+</head>
+
+<body>
+     <!-- index page  -->
+     <div>
+
+          <header>
+               <h1 style="color: orange;">Welcome to My Portfolio</h1>
+               <nav>
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="resume.html">Resume</a>
+                    <a href="contact.html">Contact</a>
+               </nav>
+          </header>
+
+          <div class="container">
+               <img src="./image/WhatsApp Image 2025-03-09 at 08.48.54_5038e28d.jpg" alt="saugat bista "
+                    id="profileImage" style="max-width:max-content;">
+               <div class="text">
+                    <h1 style="color: orange;"> Hi,I am Saugat Bista</h1>
+                    <h2 id="dynamicText" style="color: navajowhite;">Welcome to my portfolio!</h2>
+                    <p style="font-size: 25px; ">I'm an agent with a passion for saving
+                         peoplelifes and
+                         providing knowledge
+                         for
+                         them. I love to meet
+                         People and provide financial advice for them . Welcome to
+                         my personal portfolio where you can find my projects and learn more about me.</p>
+               </div>
+          </div>
+
+          <script>
+               // Internal JavaScript
+               document.addEventListener('DOMContentLoaded', function () {
+                    const dynamicText = document.getElementById('dynamicText');
+                    const greetings = [
+
+                         "Let's connect and collaborate!"
+                    ];
+
+                    let index = 0;
+                    setInterval(() => {
+                         dynamicText.textContent = greetings[index];
+                         index = (index + 1) % greetings.length;
+                    }, 3000);
+               });
+          </script>
+     </div>
+     <!-- adding about me page  -->
+     <div>
+
+          <h1 style="color:orange;">About Me</h1>
+          <div class="container">
+
+               <img src="./image/WhatsApp Image 2025-03-09 at 08.48.54_5038e28d.jpg" alt="saugat bista "
+                    id="profileImage">
+
+
+               <p id="aboutText" style="color: beige;">I am an insurance agent dedicated to protecting individuals and
+                    families by providing
+                    them
+                    with the right insurance solutions. My passion lies in saving lives and ensuring that my clients
+                    have the
+                    knowledge they need to make informed decisions about their financial futures. I love meeting new
+                    people
+                    and understanding their unique needs, which allows me to offer tailored financial advice that truly
+                    makes
+                    a difference.</p>
+          </div>
+
+
+
+          <script>
+
+               document.addEventListener('DOMContentLoaded', function () {
+                    const aboutText = document.getElementById('aboutText');
+                    const additionalInfo = [
+                         "I believe in empowering individuals with the right insurance knowledge.",
+                         "My goal is to help you achieve financial stability and peace of mind through comprehensive coverage.",
+                         "With years of experience in the insurance industry, I am dedicated to serving my clients with integrity.",
+                         "Let's work together to secure your financial future and protect what matters most!"
+                    ];
+
+                    let index = 0;
+                    setInterval(() => {
+                         aboutText.textContent = additionalInfo[index];
+                         index = (index + 1) % additionalInfo.length;
+                    }, 5000); // Change text every 5 seconds
+               });
+          </script>
+          <footer>
+               <p>&copy; saugatbista@. All Rights Reserved.</p>
+          </footer>
+
+     </div>
+     <a href="about.html" style="color: #fff;">Go to about page </a>
+     <h6>or</h6>
+
+     <a href="resume.html" style="color: #fff;">Resume </a>
+</body>
+
+</html>
